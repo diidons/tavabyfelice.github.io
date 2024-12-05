@@ -11,8 +11,15 @@ body {
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
+    background-image: url('Pics/image3.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center 21%; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
-
+html, body {
+    height: 100%; /* Set height to 100% */
+    margin: 0; /* Remove default margin */
+}
 /* Header */
 header {
     background-color: #003e1f;
@@ -70,22 +77,24 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     padding: 40px 20px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .card {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.507); /* Semi-transparent white background */
+    backdrop-filter: blur(20px); /* Blur the background behind the card */
+    border-radius: 15px; /* Rounded corners */
     padding: 20px;
     width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.507);
     text-align: center;
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a light border */
 }
 
 .card:hover {
     transform: scale(1.15);
-    background-color: #edf1ef;
+    background: rgba(255, 255, 255, 0.774); /* Slightly more opaque on hover */
 }
 
 .card h3 {
@@ -98,15 +107,39 @@ header nav ul li a:hover {
     color: #333;
 }
 
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    font-family: 'Jost', sans-serif;
+    background-color: #f0f8ff; /* Fallback color */
+    color: #333;
+    line-height: 1.6;
+    background-image: url('Pics/image3.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center 20%; /* Adjust the vertical position */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
 /* Footer */
 footer {
-    background-color: #003e1f;
+    background: rgba(0, 62, 31, 0.623); /* Semi-transparent green background */
+    backdrop-filter: blur(10px); /* Blur the background behind the footer */
+    border-radius: 5px; /* Rounded corners */
     text-align: center;
     padding: 20px;
-    color: white;
+    color: white; /* Keep the text color white for contrast */
     font-size: 1rem;
+    position: relative; /* Ensure it is positioned relative to the normal flow */
+    width: 100%; /* Make sure it takes the full width */
+    bottom: 0; /* Position it at the bottom */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
 }
 
+main {
+    flex: 1; /* Allow the main content to grow and take available space */
+}
+
+/* General styles for countdown container */
 #countdown-container {
     position: absolute;
     top: 20px;
@@ -121,6 +154,24 @@ footer {
     display: flex;
     flex-direction: column; /* Stack text and countdown vertically */
     align-items: center; /* Center horizontally */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #countdown-container {
+        position: relative; /* Change to relative positioning */
+        top: auto; /* Reset top positioning */
+        right: auto; /* Reset right positioning */
+        margin: 20px auto; /* Center the countdown container */
+        width: 90%; /* Make it responsive */
+        border-radius: 20px;
+    }
+
+    .intro {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+
 }
 
 .countdown-text {
