@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
+    
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taverna degli Amici</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TavaByFelice</title>
+    <!-- Link al font Jost -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Taverna degli Amici</h1>
+        <div class="container">
+            <h1>TavaByFelice</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Eventi</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Eventi</a></li>
-                <li><a href="#">Foto</a></li>
-                <li><a href="#">Contatti</a></li>
-            </ul>
-        </nav>
     </header>
     
-    <section class="intro">
-        <h2>Benvenuto nella nostra Taverna!</h2>
-        <p>Qui condividiamo i momenti migliori che trascorriamo insieme. Tanti eventi, risate e foto che raccontano la nostra storia.</p>
-    </section>
 
-    <section class="gallery">
-        <h2>Le Nostre Avventure</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="image1.HEIC" alt="Foto 1">
+    <main>
+        <section class="intro">
+            <h2>Sito della TavaByFelice</h2>
+            <p>Aggiornamenti e foto!</p>
+            <div id="countdown-container">
+                <div class="countdown-text">Tempo rimanente per il Secret Santa:</div>
+                <div id="countdown"></div> <!-- Countdown display -->
             </div>
-            <div class="gallery-item">
-                <img src="image2.HEIC" alt="Foto 2">
+        </section>
+        <section class="content">
+            <div class="card">
+                <h3>Eventi</h3>
+                <p>Partecipa ai nostri eventi , giochi e incontri</p>
             </div>
-            <div class="gallery-item">
-                <img src="image3.heic" alt="Foto 3">
+            <div class="card">
+                <h3>Attività e Giochi</h3>
+                <p>Unisciti a noi per giochi divertenti e scambi di regali</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Taverna degli Amici | Tutti i diritti riservati</p>
+        <p>&copy; 2024 TavaByFelice</p>
     </footer>
+    <script src="countdown.js"></script>
 </body>
 </html>
+

@@ -1,118 +1,138 @@
+/* Reset di base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Impostazioni generali */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
-    color: #5f4b3a;
+    font-family: 'Jost', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #c0392b; /* Rosso natalizio */
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid #27ae60; /* Verde di Natale */
+    background-color: #003e1f;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    color: white;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
+header nav ul {
+    list-style: none;
+    margin-top: 10px;
 }
 
-nav ul li {
+header nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-}
-
-nav ul li a:hover {
-    color: #f39c12; /* Colore dorato natalizio */
-}
-
-.intro {
-    background-color: #27ae60; /* Verde natalizio */
     color: white;
-    padding: 40px;
-    text-align: center;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.intro h2 {
-    font-size: 2.5rem;
-    font-family: 'Georgia', serif;
-}
-
-.intro p {
+    font-weight: 700;
     font-size: 1.2rem;
 }
 
-.gallery {
-    padding: 20px;
+header nav ul li a:hover {
+    color: #ef233c;
+}
+
+/* Sezione Intro */
+.intro {
+    background-color: #f3f7f0;
+    padding: 40px 20px;
     text-align: center;
-    background-color: #f4f1e1;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-bottom: 10px solid #ef233c;
 }
 
-.gallery h2 {
+.intro h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #c0392b;
+    color: #ef233c;
 }
 
-.gallery-container {
+.intro p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Contenuto principale */
+.content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 40px 20px;
     gap: 20px;
 }
 
-.gallery-item img {
-    width: 300px;
-    height: auto;
+.card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 5px solid #f39c12; /* Bordo dorato per l'effetto natalizio */
-}
-
-footer {
-    background-color: #c0392b; /* Rosso natalizio */
-    color: #fff;
-    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 40px;
-    border-top: 5px solid #27ae60;
+    transition: transform 0.3s ease;
 }
 
-footer p {
+.card:hover {
+    transform: scale(1.15);
+    background-color: #edf1ef;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #ef233c;
+}
+
+.card p {
     font-size: 1rem;
-    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
-/* Decorazioni natalizie */
-body::before {
-    content: "🎄";
+/* Footer */
+footer {
+    background-color: #003e1f;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+#countdown-container {
     position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
-    color: #c0392b;
+    right: 20px;
+    background-color: #ef233c;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Set a fixed width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Add padding around the content */
+    display: flex;
+    flex-direction: column; /* Stack text and countdown vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.countdown-text {
+    font-size: 0.8rem; /* Adjust font size for the text */
+    margin-bottom: 5px; /* Space between text and countdown */
+}
+
+#countdown {
+    font-size: 1rem; /* Font size for the countdown */
+    font-weight: bold; /* Make countdown text bold */
+}
+
+header {
+    position: relative;
 }
