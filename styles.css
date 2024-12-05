@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    color: #5f4b3a;
+}
+
+header {
+    background-color: #c0392b; /* Rosso natalizio */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #27ae60; /* Verde di Natale */
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Colore dorato natalizio */
+}
+
+.intro {
+    background-color: #27ae60; /* Verde natalizio */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+.gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f1e1;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c0392b;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #f39c12; /* Bordo dorato per l'effetto natalizio */
+}
+
+footer {
+    background-color: #c0392b; /* Rosso natalizio */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 5px solid #27ae60;
+}
+
+footer p {
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Decorazioni natalizie */
+body::before {
+    content: "🎄";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #c0392b;
+}
