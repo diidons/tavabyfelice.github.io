@@ -247,12 +247,3 @@ header {
     
 }
 
-body {
-    overflow: hidden; /* Nasconde le barre di scorrimento */
-}
-
-#snow-container {
-    position: relative;
-    overflow: hidden; /* Nasconde le barre di scorrimento nel contenitore */
-    height: 110vh; /* Assicurati che il contenitore abbia un'altezza */
-}
