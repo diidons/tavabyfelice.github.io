@@ -143,8 +143,8 @@ footer {
 
 main {
     flex: 1; /* Allow the main content to grow and take available space */
+    
 }
-
 /* General styles for countdown container */
 #countdown-container {
     position: absolute;
@@ -187,6 +187,12 @@ main {
         margin: 10px 0; /* Aggiungi margine verticale tra le card */
     }
 
+    body {
+        background-image: url('Pics/image4.png'); /* Immagine verticale per dispositivi mobili */
+        background-size: cover; /* Copri l'intera area */
+        background-position: center 30%; /* Centra l'immagine */
+        background-repeat: no-repeat; /* Non ripetere l'immagine */
+    }
 
 }
 
