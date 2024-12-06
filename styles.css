@@ -162,8 +162,7 @@ main {
     align-items: center; /* Center horizontally */
 }
 
-/* Media query for mobile devices */
-/* Media query for mobile devices */
+
 @media (max-width: 768px) {
     #countdown-container {
         position: relative; /* Change to relative positioning */
@@ -175,7 +174,17 @@ main {
     }
 
     .intro {
-        padding: 0px; /* Adjust padding for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .content {
+        flex-direction: column; /* Cambia la direzione in colonna per schermi piccoli */
+        align-items: center; /* Centra le card */
+    }
+
+    .card {
+        width: 90%; /* Imposta una larghezza del 90% per le card */
+        margin: 10px 0; /* Aggiungi margine verticale tra le card */
     }
 
 
