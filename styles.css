@@ -92,9 +92,15 @@ header nav ul li a:hover {
     border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a light border */
 }
 
+.card a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Mantiene il colore del testo della card */
+}
+
 .card:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     background: rgba(255, 255, 255, 0.774); /* Slightly more opaque on hover */
+    cursor: pointer;
 }
 
 .card h3 {
@@ -157,6 +163,7 @@ main {
 }
 
 /* Media query for mobile devices */
+/* Media query for mobile devices */
 @media (max-width: 768px) {
     #countdown-container {
         position: relative; /* Change to relative positioning */
@@ -186,4 +193,57 @@ main {
 
 header {
     position: relative;
+}
+
+.indicatore {
+    display: inline-block; /* Permette di posizionarlo accanto al testo */
+    width: 12px; /* Larghezza del bollino */
+    height: 12px; /* Altezza del bollino */
+    border-radius: 50%; /* Rende il bollino rotondo */
+    background-color: red; /* Colore iniziale del bollino */
+    margin-right: 5px; /* Spazio ridotto tra il bollino e il testo */
+    opacity: 0; /* Inizialmente invisibile */
+    animation: blink 2s infinite; /* Applica l'animazione */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0; /* Inizia e finisce invisibile */
+    }
+    50% {
+        opacity: 1; /* Diventa visibile a metà animazione */
+    }
+}
+
+
+.snowflake {
+    position: absolute;
+    top: -10%; /* Inizia sopra la pagina */
+    font-size: 24px; /* Dimensione del fiocco di neve */
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    color: white;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1; /* Opacità iniziale */
+    }
+    100% {
+        transform: translateY(30vh); /* Caduta fino in fondo alla pagina */
+        opacity: 0; /* Opacità finale */
+    }
+    
+}
+
+body {
+    overflow: hidden; /* Nasconde le barre di scorrimento */
+}
+
+#snow-container {
+    position: relative;
+    overflow: hidden; /* Nasconde le barre di scorrimento nel contenitore */
+    height: 110vh; /* Assicurati che il contenitore abbia un'altezza */
 }
