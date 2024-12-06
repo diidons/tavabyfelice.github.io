@@ -12,15 +12,16 @@ body {
     color: #333;
     line-height: 1.6;
     background-image: url('Pics/image3.jpg');
-    background-size: cover; /* Cover the entire area */
-    background-position: center 21%; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Copre tutta l'area */
+    background-position: center 21%; 
+    background-repeat: no-repeat; 
 }
 html, body {
-    height: 100%; /* Set height to 100% */
-    margin: 0; /* Remove default margin */
+    height: 100%; 
+    margin: 0; /
 }
-/* Header */
+
+
 header {
     background-color: #003e1f;
     padding: 20px 0;
@@ -77,30 +78,29 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 40px 20px;
-    gap: 35px;
+    gap: 10px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.507); /* Semi-transparent white background */
-    backdrop-filter: blur(20px); /* Blur the background behind the card */
-    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.507); 
+    backdrop-filter: blur(20px); 
+    border-radius: 15px; /* Bordi tondi */
     padding: 20px;
     width: 250px;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.507);
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a light border */
+    border: 1px solid rgba(255, 255, 255, 0.5); 
 }
 
-
 .card a {
-    text-decoration: none; /* Rimuove la sottolineatura */
+    text-decoration: none; /* Rimuove la sottolineatura che deriva dal link*/
     color: inherit; /* Mantiene il colore del testo della card */
 }
 
 .card:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.774); /* Slightly more opaque on hover */
+    background: rgba(255, 255, 255, 0.774);
     cursor: pointer;
 }
 
@@ -116,37 +116,40 @@ header nav ul li a:hover {
 
 body {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    flex-direction: column;
+    min-height: 100vh; 
     font-family: 'Jost', sans-serif;
-    background-color: #f0f8ff; /* Fallback color */
+    background-color: #f0f8ff; 
     color: #333;
     line-height: 1.6;
-    background-image: url('Pics/image3.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center 20%; /* Adjust the vertical position */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-image: url('Pics/image3.jpg'); 
+    background-size: cover; 
+    background-position: center 20%; 
+    background-repeat: no-repeat; 
 }
+
+
 /* Footer */
 footer {
-    background: rgba(0, 62, 31, 0.623); /* Semi-transparent green background */
-    backdrop-filter: blur(10px); /* Blur the background behind the footer */
+    background: rgb(0, 62, 31, 0.623);
+    backdrop-filter: blur(10px);
 
     text-align: center;
     padding: 20px;
-    color: white; /* Keep the text color white for contrast */
+    color: white;
     font-size: 1rem;
-    position: relative; /* Ensure it is positioned relative to the normal flow */
-    width: 100%; /* Make sure it takes the full width */
-    bottom: 0; /* Position it at the bottom */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
-    flex: 1; /* Allow the main content to grow and take available space */
+    flex: 1;
     
 }
-/* General styles for countdown container */
+
+
 #countdown-container {
     position: absolute;
     top: 20px;
@@ -155,27 +158,27 @@ main {
     color: white;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Set a fixed width */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Add padding around the content */
+    width: 250px;
+    height: auto;
+    padding: 10px;
     display: flex;
-    flex-direction: column; /* Stack text and countdown vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 
 @media (max-width: 768px) {
     #countdown-container {
-        position: relative; /* Change to relative positioning */
-        top: auto; /* Reset top positioning */
-        right: auto; /* Reset right positioning */
-        margin: 20px auto; /* Center the countdown container */
-        width: 90%; /* Make it responsive */
+        position: relative; 
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        width: 90%;
         border-radius: 20px;
     }
 
     .intro {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     .content {
@@ -191,20 +194,35 @@ main {
     body {
         background-image: url('Pics/image4.png'); /* Immagine verticale per dispositivi mobili */
         background-size: cover; /* Copri l'intera area */
-        background-position: center -49%; /* Centra l'immagine */
+        background-position: center -60%; /* Centra l'immagine */
         background-repeat: no-repeat; /* Non ripetere l'immagine */
     }
+
+    footer {
+        background: rgb(0, 62, 31); 
+        backdrop-filter: blur(10px); 
+    
+        text-align: center;
+        padding: 20px;
+        color: white; 
+        font-size: 1rem;
+        position: relative;
+        width: 100%; 
+        bottom: 0; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    
 
 }
 
 .countdown-text {
-    font-size: 0.8rem; /* Adjust font size for the text */
-    margin-bottom: 5px; /* Space between text and countdown */
+    font-size: 0.8rem; 
+    margin-bottom: 5px; 
 }
 
 #countdown {
-    font-size: 1rem; /* Font size for the countdown */
-    font-weight: bold; /* Make countdown text bold */
+    font-size: 1rem; 
+    font-weight: bold;
 }
 
 header {
@@ -248,7 +266,7 @@ header {
         opacity: 1; /* Opacità iniziale */
     }
     100% {
-        transform: translateY(30vh); /* Caduta fino in fondo alla pagina */
+        transform: translateY(30vh); /* Caduta fino in fondo alla parte verde */
         opacity: 0; /* Opacità finale */
     }
     
