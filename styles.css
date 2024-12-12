@@ -7,25 +7,29 @@
 
 /* Impostazioni generali */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
     font-family: 'Jost', sans-serif;
-    background-color: #f0f8ff;
+    background-color: #f0f8ff; 
     color: #333;
     line-height: 1.6;
-    background-image: url('Pics/image3.jpg');
-    background-size: cover; /* Cover the entire area */
-    background-position: center 21%; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-image: url('Pics/image3.jpg'); 
+    background-size: cover; 
+    background-position: center 20%; 
+    background-repeat: no-repeat;
+
 }
-html, body {
-    height: 100%; /* Set height to 100% */
-    margin: 0; /* Remove default margin */
-}
+
+
+
 /* Header */
 header {
     background-color: #003e1f;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header h1 {
@@ -73,6 +77,15 @@ header nav ul li a:hover {
 }
 
 /* Contenuto principale */
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack verticalmente */
+    margin-bottom: 200px;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -80,27 +93,37 @@ header nav ul li a:hover {
     gap: 35px;
 }
 
+
+.content2 {
+    margin-top: auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card */
 .card {
-    background: rgba(255, 255, 255, 0.507); /* Semi-transparent white background */
-    backdrop-filter: blur(20px); /* Blur the background behind the card */
-    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
     padding: 20px;
     width: 250px;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.507);
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a light border */
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-
 .card a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: inherit; /* Mantiene il colore del testo della card */
+    text-decoration: none;
+    color: inherit;
 }
 
 .card:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.774); /* Slightly more opaque on hover */
+    background: rgba(255, 255, 255, 0.774);
     cursor: pointer;
 }
 
@@ -114,39 +137,7 @@ header nav ul li a:hover {
     color: #333;
 }
 
-body {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
-    font-family: 'Jost', sans-serif;
-    background-color: #f0f8ff; /* Fallback color */
-    color: #333;
-    line-height: 1.6;
-    background-image: url('Pics/image3.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center 20%; /* Adjust the vertical position */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-/* Footer */
-footer {
-    background: rgba(0, 62, 31, 0.623); /* Semi-transparent green background */
-    backdrop-filter: blur(10px); /* Blur the background behind the footer */
-
-    text-align: center;
-    padding: 20px;
-    color: white; /* Keep the text color white for contrast */
-    font-size: 1rem;
-    position: relative; /* Ensure it is positioned relative to the normal flow */
-    width: 100%; /* Make sure it takes the full width */
-    bottom: 0; /* Position it at the bottom */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-}
-
-main {
-    flex: 1; /* Allow the main content to grow and take available space */
-    
-}
-/* General styles for countdown container */
+/* Countdown Container */
 #countdown-container {
     position: absolute;
     top: 20px;
@@ -155,87 +146,65 @@ main {
     color: white;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Set a fixed width */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Add padding around the content */
+    width: 250px;
+    padding: 10px;
     display: flex;
-    flex-direction: column; /* Stack text and countdown vertically */
-    align-items: center; /* Center horizontally */
-}
-
-
-@media (max-width: 768px) {
-    #countdown-container {
-        position: relative; /* Change to relative positioning */
-        top: auto; /* Reset top positioning */
-        right: auto; /* Reset right positioning */
-        margin: 20px auto; /* Center the countdown container */
-        width: 90%; /* Make it responsive */
-        border-radius: 20px;
-    }
-
-    .intro {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .content {
-        flex-direction: column; /* Cambia la direzione in colonna per schermi piccoli */
-        align-items: center; /* Centra le card */
-    }
-
-    .card {
-        width: 90%; /* Imposta una larghezza del 90% per le card */
-        margin: 10px 0; /* Aggiungi margine verticale tra le card */
-    }
-
-    body {
-        background-image: url('Pics/image4.png'); /* Immagine verticale per dispositivi mobili */
-        background-size: cover; /* Copri l'intera area */
-        background-position: center -49%; /* Centra l'immagine */
-        background-repeat: no-repeat; /* Non ripetere l'immagine */
-    }
-
+    flex-direction: column;
+    align-items: center;
 }
 
 .countdown-text {
-    font-size: 0.8rem; /* Adjust font size for the text */
-    margin-bottom: 5px; /* Space between text and countdown */
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }
 
 #countdown {
-    font-size: 1rem; /* Font size for the countdown */
-    font-weight: bold; /* Make countdown text bold */
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-header {
-    position: relative;
+/* Footer */
+footer {
+    background: rgba(0, 62, 31, 0.623); /* Mantieni il background originale */
+    backdrop-filter: blur(10px); /* Mantieni il blur originale */
+    text-align: center; /* Mantieni l'allineamento al centro */
+    padding: 20px; /* Mantieni il padding originale */
+    color: white; /* Mantieni il colore del testo originale */
+    font-size: 1rem; /* Mantieni la dimensione del font originale */
+    position: fixed; /* Fissa il footer in basso */
+    bottom: 0; /* Posiziona il footer in fondo alla pagina */
+    left: 0; /* Allinea il footer a sinistra */
+    right: 0; /* Allinea il footer a destra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantieni l'ombra originale */
+    z-index: 1000; /* Assicurati che il footer sia sopra gli altri contenuti */
 }
 
+/* Indicatore per gli eventi */
 .indicatore {
-    display: inline-block; /* Permette di posizionarlo accanto al testo */
-    width: 12px; /* Larghezza del bollino */
-    height: 12px; /* Altezza del bollino */
-    border-radius: 50%; /* Rende il bollino rotondo */
-    background-color: red; /* Colore iniziale del bollino */
-    margin-right: 5px; /* Spazio ridotto tra il bollino e il testo */
-    opacity: 0; /* Inizialmente invisibile */
-    animation: blink 2s infinite; /* Applica l'animazione */
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+    opacity: 0;
+    animation: blink 2s infinite;
 }
 
 @keyframes blink {
     0%, 100% {
-        opacity: 0; /* Inizia e finisce invisibile */
+        opacity: 0;
     }
     50% {
-        opacity: 1; /* Diventa visibile a metà animazione */
+        opacity: 1;
     }
 }
 
-
+/* Snowflake */
 .snowflake {
     position: absolute;
-    top: -10%; /* Inizia sopra la pagina */
-    font-size: 24px; /* Dimensione del fiocco di neve */
+    top: -10%;
+    font-size: 24px;
     animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -245,12 +214,42 @@ header {
 @keyframes fall {
     0% {
         transform: translateY(0);
-        opacity: 1; /* Opacità iniziale */
+        opacity: 1;
     }
     100% {
-        transform: translateY(30vh); /* Caduta fino in fondo alla pagina */
-        opacity: 0; /* Opacità finale */
+        transform: translateY(30vh);
+        opacity: 0;
     }
-    
 }
 
+/* Media Query per schermi piccoli */
+@media (max-width: 768px) {
+    #countdown-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .intro {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    body {
+        background-image: url('Pics/image4.png');
+        background-size: cover;
+        background-position: center -49%;
+    }
+}

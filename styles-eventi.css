@@ -115,38 +115,42 @@ header nav ul li a:hover {
 }
 
 body {
+
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
     font-family: 'Jost', sans-serif;
-    background-color: #f0f8ff; 
+    background-color:  #003e1f;
     color: #333;
     line-height: 1.6;
     background-image: url('Pics/image3.jpg'); 
     background-size: cover; 
     background-position: center 20%; 
     background-repeat: no-repeat; 
+
 }
 
 
 /* Footer */
 footer {
-    background: rgb(0, 62, 31, 0.623);
-    backdrop-filter: blur(10px);
-
-    text-align: center;
-    padding: 20px;
-    color: white;
-    font-size: 1rem;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 62, 31, 0.623); /* Mantieni il background originale */
+    backdrop-filter: blur(10px); /* Mantieni il blur originale */
+    text-align: center; /* Mantieni l'allineamento al centro */
+    padding: 20px; /* Mantieni il padding originale */
+    color: white; /* Mantieni il colore del testo originale */
+    font-size: 1rem; /* Mantieni la dimensione del font originale */
+    position: fixed; /* Fissa il footer in basso */
+    bottom: 0; /* Posiziona il footer in fondo alla pagina */
+    left: 0; /* Allinea il footer a sinistra */
+    right: 0; /* Allinea il footer a destra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantieni l'ombra originale */
+    z-index: 1000; /* Assicurati che il footer sia sopra gli altri contenuti */
 }
+
 
 main {
     flex: 1;
-    
+    min-height: 103vh;
 }
 
 
@@ -177,6 +181,7 @@ main {
         border-radius: 20px;
     }
 
+
     .intro {
         padding: 10px;
     }
@@ -199,17 +204,18 @@ main {
     }
 
     footer {
-        background: rgb(0, 62, 31); 
-        backdrop-filter: blur(10px); 
-    
-        text-align: center;
-        padding: 20px;
-        color: white; 
-        font-size: 1rem;
-        position: relative;
-        width: 100%; 
-        bottom: 0; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        background: rgba(0, 62, 31, 0.623); /* Mantieni il background originale */
+        backdrop-filter: blur(10px); /* Mantieni il blur originale */
+        text-align: center; /* Mantieni l'allineamento al centro */
+        padding: 20px; /* Mantieni il padding originale */
+        color: white; /* Mantieni il colore del testo originale */
+        font-size: 1rem; /* Mantieni la dimensione del font originale */
+        position: fixed; /* Fissa il footer in basso */
+        bottom: 0; /* Posiziona il footer in fondo alla pagina */
+        left: 0; /* Allinea il footer a sinistra */
+        right: 0; /* Allinea il footer a destra */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantieni l'ombra originale */
+        z-index: 1000; /* Assicurati che il footer sia sopra gli altri contenuti */
     }
     
 
@@ -271,4 +277,5 @@ header {
     }
     
 }
+
 
