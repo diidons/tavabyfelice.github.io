@@ -20,7 +20,7 @@ export default function CodicePage() {
 
     if (response.ok) {
         sessionStorage.setItem('hasAccess', 'true');
-        router.push('/eventi');
+        router.push('/eventi-nuovi');
     } else {
       const data = await response.json();
       setError(data.message || 'Errore di accesso');
