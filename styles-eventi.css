@@ -148,10 +148,7 @@ footer {
 }
 
 
-main {
-    flex: 1;
-    min-height: 103vh;
-}
+
 
 
 #countdown-container {
@@ -172,6 +169,12 @@ main {
 
 
 @media (max-width: 768px) {
+    main {
+        flex: 1;
+        min-height: 140vh;
+    }
+    
+    
     #countdown-container {
         position: relative; 
         top: auto;
