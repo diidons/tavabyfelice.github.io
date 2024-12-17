@@ -227,6 +227,29 @@ footer {
     }
   }
   
+/* Indicatore per gli eventi */
+.indicatore {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+    opacity: 0;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
   /* Media Query per schermi piccoli */
   @media (max-width: 768px) {
     .content {
