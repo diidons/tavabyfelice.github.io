@@ -11,7 +11,7 @@
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
-    background-color: #003e1f;
+    background-color: #dc2f02;
     color: #333;
     line-height: 1.6;
     background-image: url('Pics/image3.jpg');
@@ -22,7 +22,7 @@
   
   /* Header */
   header {
-    background-color: #003e1f;
+    background-color: #dc2f02;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -52,8 +52,25 @@
   }
   
   header nav ul li a:hover {
-    color: #ef233c;
+    color: #35a4ff;
+    filter: drop-shadow(0 0 8px #0172CD);
+    transition: ease-in-out 0.3s;
   }
+
+  header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Inizia con larghezza 0 */
+    height: 2.5px; /* Altezza della sottolineatura */
+    background-color: #0172CD; /* Colore della sottolineatura */
+    bottom: -2px; /* Posizione rispetto al testo */
+    left: 0;
+    transition: width 0.3s ease; /* Animazione della larghezza */
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Espande la sottolineatura al 100% della larghezza del testo */
+}
   
   /* Sezione Intro */
   .intro {
@@ -61,12 +78,12 @@
     backdrop-filter: blur(10px);
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 10px solid #ef233c;
+    border-bottom: 10px solid #0172CD;
   }
   
   .intro h2 {
     font-size: 2rem;
-    color: #ef233c;
+    color: #0172CD;
   }
   
   .intro p {
@@ -124,7 +141,7 @@
     background: radial-gradient(ellipse at right top, #107667ed 0%, #15141993 47%, #1514196e 100%);
   }
   .green:hover {
-    background: rgba(16, 118, 103, 0.8);
+    background: #dc2e0256;
   }
   
   .blue {
@@ -145,13 +162,13 @@
     background: radial-gradient(ellipse at right top, #a63d2a82 0%, #15141993 47%, #1514196e 100%);
   }
   .red:hover {
-    background: rgba(166, 61, 42, 0.336);
+    background: #dc2e0256;
   }
   
   /* Effetti al passaggio del mouse */
   .card h3 {
     font-size: 1.5rem;
-    color: #ef233c;
+    color: #0172CD;
   }
   
   .card p {
@@ -187,7 +204,7 @@
   
 /* Footer */
 footer {
-    background: rgba(0, 62, 31, 0.623);
+    background: #0172ce3d;
     backdrop-filter: blur(10px);
     text-align: center;
     padding: 20px;
@@ -286,7 +303,7 @@ footer::before {
     left: 0;
     width: 100%;
     height: 2px; /* Altezza del bordo */
-    background: linear-gradient(90deg, rgba(0, 62, 31, 0),  #f0f8ff, rgba(0, 62, 31, 0.041));
+    background: linear-gradient(90deg, rgba(0, 62, 31, 0),  #EB4A00, rgba(0, 62, 31, 0.041));
     animation: animate-border 10s linear ;
 }
 

@@ -6,7 +6,7 @@ if (window.location.pathname.endsWith('eventi.html')) {
         for (let i = 0; i < snowflakeCount; i++) {
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
-            snowflake.textContent = '❄'; // Simbolo del fiocco di neve
+            snowflake.textContent = 'cocci'; // Simbolo del fiocco di neve
             snowflake.style.left = Math.random() * 100 + 'vw'; // Posizione orizzontale casuale
             snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Durata casuale dell'animazione
             document.body.appendChild(snowflake);

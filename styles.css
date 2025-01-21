@@ -1,26 +1,19 @@
-/* Reset di base */
-* {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden; /* Per evitare lo scorrimento orizzontale */
 }
-
-/* Impostazioni generali */
 body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
-    font-family: 'Jost', sans-serif;
-    background-color: #f0f8ff; 
-    color: #333;
-    line-height: 1.6;
-    background-image: url('Pics/image3.jpg'); 
-    background-size: cover; 
-    background-position: center 20%; 
-    background-repeat: no-repeat;
-
+    min-height: 100vh; /* mantiene il layout a schermo intero */
 }
-
 
 
 /* Header */
