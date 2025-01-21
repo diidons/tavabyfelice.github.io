@@ -136,9 +136,14 @@ header nav ul li a:hover::after {
     cursor: pointer;
   }
   
+
+
+
+
   /* Varianti di colore */
   .green {
     background: radial-gradient(ellipse at right top, #107667ed 0%, #15141993 47%, #1514196e 100%);
+    width: auto;
   }
   .green:hover {
     background: #dc2e0256;
@@ -265,10 +270,27 @@ footer {
     }
 }
 
+#treviso-match {
+  filter: drop-shadow(0 0 15px #0172CD);
+  transition: transform 0.5s ease;
+  image-rendering: crisp-edges;
+}
 
+#treviso-match:hover {
+  transform: scale(1.3);
+}
 
   /* Media Query per schermi piccoli */
   @media (max-width: 768px) {
+    #treviso-match {
+      width: 300px;
+      filter: drop-shadow(0 0 8px #0172CD);
+    }
+
+    #treviso-match:hover {
+      transform: none;
+    }
+
     .content {
       flex-direction: column;
       align-items: center;
