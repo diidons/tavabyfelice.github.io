@@ -114,7 +114,7 @@ header nav ul li a:hover::after {
     border-radius: 2.25rem;
     padding: 20px;
     width: 250px;
-    height: 250px;
+    height: auto;
     box-shadow: 1px 12px 25px rgba(0, 0, 0, 0.78);
     text-align: center;
     transition: transform 0.5s ease;
@@ -131,11 +131,66 @@ header nav ul li a:hover::after {
   }
   
   .card:hover {
-    transform: scale(1.05);
+    transform: scale(0.98);
     background: rgba(255, 255, 255, 0.774);
     cursor: pointer;
   }
   
+
+  .sanremo-card {
+    width: 500px; /* Imposta la larghezza desiderata */
+    position: relative; /* Assicura che gli elementi assoluti siano posizionati relativamente a questa card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Assicura che le immagini non escano dal contenitore */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sanremo-img {
+  width: 90%;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: solid 1.2px white;
+  box-shadow: 0 0px 10px #293FAD;
+  display: none; /* Nascondi tutte le immagini inizialmente */
+  animation: blurImmagini 8s infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+.sanremo-img:first-child {
+  display: block; /* Mostra la prima immagine */
+}
+
+@keyframes blurImmagini {
+  0% {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  10% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  90% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  
+}
 
 
 
@@ -186,7 +241,7 @@ header nav ul li a:hover::after {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #ef233c;
+    background-color: #293FAD;
     color: white;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -270,27 +325,9 @@ footer {
     }
 }
 
-#treviso-match {
-  filter: drop-shadow(0 0 15px #0172CD);
-  transition: transform 0.5s ease;
-  image-rendering: crisp-edges;
-}
-
-#treviso-match:hover {
-  transform: scale(1.3);
-}
 
   /* Media Query per schermi piccoli */
   @media (max-width: 768px) {
-    #treviso-match {
-      width: 300px;
-      filter: drop-shadow(0 0 8px #0172CD);
-    }
-
-    #treviso-match:hover {
-      transform: none;
-    }
-
     .content {
       flex-direction: column;
       align-items: center;

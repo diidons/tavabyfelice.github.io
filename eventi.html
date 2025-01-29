@@ -10,6 +10,10 @@
 <body>
     <header>
         <h1>TavaByFelice</h1>
+        <div id="countdown-container">
+            <p class="countdown-text">Countdown alla Prima Serata di Sanremo:</p>
+            <div id="countdown"></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,13 +29,21 @@
         </section>
         
         <section class="content">
-
-            <div class="card green">
-                <h3>Nutribullet Treviso Basket - Napoli Basket</h3>
-                <img id="treviso-match" src="Pics/partita_treviso.png" alt="TrevisoBasketMatchNapoli" style="max-width: 400px; height: auto; padding-bottom: 0px; padding-top: 12px;">
-
+            <div class="card blue sanremo-card">
+                <a href="eventi.html"> 
+                    <h3>Serate Sanremo</h3>
+                    <p><strong>Prima Serata: </strong>Martedì 11 Febbraio</p>
+                    <p><strong>Seconda Serata: </strong>Mercoledì 12 Febbraio</p>
+                    <p><strong>Terza Serata: </strong>Giovedì 13 Febbraio</p>
+                    <p><strong>Quarta Serata <em>(cover)</em> : </strong>Venerdì 14 Febbraio</p>
+                    <p><strong>Quinta Serata <em>(finale)</em> : </strong>Sabato 15 Febbraio</p>
+                    <div class="slideshow-container">
+                        <img class="sanremo-img" src="Pics/sanremoScenografia.avif" alt="Sanremo scenografia 1">
+                        <img class="sanremo-img" src="Pics/carloo.jpg" alt="Carlo Conti" style="display:none;">
+                        <img class="sanremo-img" src="Pics/sanremo2025logo.jpg" alt="Logo Sanremo 2025" style="display:none;">
+                    </div>
+                </a>
             </div>
-
             <!-- Aggiungere altre card qui -->
 
 
@@ -41,11 +53,12 @@
 
         <img src="Pics/treviso_basket.png" alt="TrevisoBasketLogo" style="max-width: 150px; height: auto; padding-bottom: 12px;">
         <img src="Pics/LuiseVuitton.png" alt="LuiseVuittonLogo" style="max-width: 170px; height: auto; padding-bottom: 0px; padding-left: 30px; filter:invert(90%);">
-        
+
         <p>&copy; 2024 TavaByFelice.</p>
         
     </footer>
     <script src="countdown.js"></script>
     <script src="snowflakes.js"></script>
+    <script src="slideshow.js"></script>
 </body>
 </html>
