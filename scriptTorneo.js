@@ -1,7 +1,14 @@
-// script.js
 let players = [];
 let currentRound = 1;
 let eliminated = [];
+
+// Funzione per mescolare l'array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 // Textarea auto-adattante
 function initAutoResize() {
@@ -21,10 +28,13 @@ function startTournament() {
         .map(p => p.trim())
         .filter(p => p);
 
-    if(players.length < 2) {
+    if (players.length < 2) {
         alert('Devi inserire almeno 2 partecipanti');
         return;
     }
+
+    // Mescola l'array dei giocatori
+    shuffleArray(players);
 
     document.getElementById("bracket").innerHTML = `<h2>${title}</h2>`;
     currentRound = 1;
@@ -35,18 +45,18 @@ function startTournament() {
 function generateRound() {
     const bracket = document.getElementById("bracket");
     bracket.innerHTML += `<h3>Round ${currentRound}</h3>`;
-    
+
     const matches = document.createElement('div');
     matches.className = 'matches-container';
 
     const tempPlayers = [...players];
     const winners = [];
-    
+
     const numMatches = Math.floor(players.length / 2);
     const hasBye = players.length % 2 !== 0;
     const totalExpectedWinners = numMatches + (hasBye ? 1 : 0);
 
-    while(tempPlayers.length >= 2) {
+    while (tempPlayers.length >= 2) {
         const p1 = tempPlayers.shift();
         const p2 = tempPlayers.shift();
         const match = createMatch(p1, p2, winners, totalExpectedWinners);
@@ -65,6 +75,16 @@ function generateRound() {
     bracket.appendChild(matches);
 }
 
+function showLoadingIndicator(duration = 500) {
+    const bracket = document.getElementById("bracket");
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'loading-indicator';
+    bracket.appendChild(loadingDiv);
+    setTimeout(() => {
+        loadingDiv.remove();
+    }, duration);
+}
+
 function createMatch(p1, p2, winners, totalExpectedWinners) {
     const container = document.createElement('div');
     container.className = 'match';
@@ -81,9 +101,9 @@ function createMatch(p1, p2, winners, totalExpectedWinners) {
     vsSpan.className = 'vs';
 
     const handleClick = (winner) => {
-        if(completed) return;
+        if (completed) return;
         completed = true;
-        
+
         const loser = winner === p1 ? p2 : p1;
         eliminated.push({ 
             player: loser, 
@@ -97,17 +117,18 @@ function createMatch(p1, p2, winners, totalExpectedWinners) {
         button2.style.backgroundColor = winner === p2 ? '#4a90e2' : '#e0e0e0';
 
         if (winners.length === totalExpectedWinners) {
+            showLoadingIndicator(500);
             setTimeout(() => {
                 players = [...winners];
                 
-                if(players.length === 1) {
+                if (players.length === 1) {
                     showFinalResults();
                     return;
                 }
-
+                
                 currentRound++;
                 
-                if(players.length % 2 !== 0 && players.length > 1) {
+                if (players.length % 2 !== 0 && players.length > 1) {
                     players.push(players.pop());
                 }
                 
@@ -126,7 +147,7 @@ function createMatch(p1, p2, winners, totalExpectedWinners) {
 function showFinalResults() {
     const winner = players[0];
     
-    if(players.length > 1) {
+    if (players.length > 1) {
         eliminated.push({
             player: players[1],
             round: currentRound
